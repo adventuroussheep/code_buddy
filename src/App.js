@@ -2,8 +2,11 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-import Javascript from './Components/Javascript/Javascript';
-import Something from './Components/something';
+// Boostrap
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+import MainList from './Components/Dropdown/MainList';
+
 
 
 function App() {
@@ -22,8 +25,7 @@ function App() {
         >
           Learn React
         </a>
-        <Javascript/>
-        <Something/>
+        <MainList/>
       </header>
     </div>
   );
