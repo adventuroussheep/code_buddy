@@ -7,28 +7,20 @@ import Dropdown from "react-bootstrap/Dropdown";
 import FormControl from "react-bootstrap/FormControl";
 import Accordion from "react-bootstrap/Accordion";
 import Card from "react-bootstrap/Card";
-import JSSubMenu from "./JSSubMenu";
 
-class JSMenu extends React.Component {
+class JSSubMenu extends React.Component {
   render() {
-    const direction = "left";
     return (
       <div>
-        <Accordion   title={` Drop ${direction} `}
-        id={`dropdown-button-drop-${direction}`}
-        key={direction} className="jsDropDownMain" defaultActiveKey="2">
+        <Accordion className="jsDropDownSub" defaultActiveKey="2">
 
 
-          <Card text="dark">
+          <Card className="subCard" text="dark">
 
-            <Accordion.Toggle eventKey="0">Array Methods</Accordion.Toggle>
+            <Accordion.Toggle className="subHeader" as={Card} eventKey="0">Array.map</Accordion.Toggle>
             <Card>
                 <Accordion.Collapse eventKey="0">
-                  <div>
-                  <Card.Body><h1>Basics</h1></Card.Body>
-                  <JSSubMenu></JSSubMenu>
-
-                  </div>
+                  <Card.Body className="subText">Hello! I'm the body</Card.Body>
                 </Accordion.Collapse>
             </Card>
           </Card>
@@ -37,7 +29,7 @@ class JSMenu extends React.Component {
 
 
           <Card text="dark">
-            <Accordion.Toggle eventKey="1">Object Methods</Accordion.Toggle>
+            <Accordion.Toggle as={Button} eventKey="1">Object Methods</Accordion.Toggle>
             <Accordion.Collapse eventKey="1">
               <Card.Body text="dark">Hello! I'm another body</Card.Body>
             </Accordion.Collapse>
@@ -50,4 +42,4 @@ class JSMenu extends React.Component {
   }
 }
 
-export default JSMenu;
+export default JSSubMenu;
